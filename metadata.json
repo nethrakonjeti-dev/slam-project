@@ -1,0 +1,6 @@
+{
+  "name": "PredictAI – Intelligent Predictive Maintenance System",
+  "description": "AI/ML and Industrial IoT predictive maintenance platform. Monitors machine health, analyzes real-time sensor data, predicts equipment failures, and recommends preventive actions.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

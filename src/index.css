@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Themes */
+  /* 1. Original Theme: Industrial Blue, Cyan, Teal, Crisp Cool Neutral Background */
+  [data-theme="original"] {
+    --bg-page: #0d1522;
+    --bg-canvas: #090f19;
+    --bg-surface: #131c2e;
+    --bg-surface-elevated: #1a263d;
+    --bg-muted: #1e2c45;
+    --border-subtle: #243552;
+    --border-strong: #3b5278;
+    --text-primary: #f0f6fc;
+    --text-secondary: #94a9c9;
+    --text-muted: #5e7599;
+    --accent-primary: #06b6d4; /* Cyan */
+    --accent-hover: #0891b2;
+    --accent-secondary: #14b8a6; /* Teal */
+    --accent-glow: rgba(6, 182, 212, 0.15);
+    --status-normal: #10b981;
+    --status-warning: #f59e0b;
+    --status-critical: #ef4444;
+  }
+
+  /* 2. Light Theme: Clean White Background, Soft Gray Cards, Dark Text, Blue Accents */
+  [data-theme="light"] {
+    --bg-page: #f8fafc;
+    --bg-canvas: #f1f5f9;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #ffffff;
+    --bg-muted: #f1f5f9;
+    --border-subtle: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --accent-primary: #0284c7; /* Industrial Blue */
+    --accent-hover: #0369a1;
+    --accent-secondary: #0d9488; /* Teal */
+    --accent-glow: rgba(2, 132, 199, 0.12);
+    --status-normal: #16a34a;
+    --status-warning: #d97706;
+    --status-critical: #dc2626;
+  }
+
+  /* 3. Dark Theme: Deep Navy Background, Dark Cards, Bright Cyan/Blue Accents */
+  [data-theme="dark"] {
+    --bg-page: #050811;
+    --bg-canvas: #020408;
+    --bg-surface: #0a0f1d;
+    --bg-surface-elevated: #111a30;
+    --bg-muted: #162038;
+    --border-subtle: #1c2a47;
+    --border-strong: #2c416b;
+    --text-primary: #f8fafc;
+    --text-secondary: #a1b3d1;
+    --text-muted: #627597;
+    --accent-primary: #38bdf8; /* Bright Sky/Cyan */
+    --accent-hover: #0ea5e9;
+    --accent-secondary: #2dd4bf;
+    --accent-glow: rgba(56, 189, 248, 0.18);
+    --status-normal: #34d399;
+    --status-warning: #fbbf24;
+    --status-critical: #f87171;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Tabular numbers for all telemetry & metrics */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Keyframes for sensor live pulse and mic waveform */
+@keyframes wave-pulse {
+  0%, 100% { height: 6px; }
+  50% { height: 26px; }
+}
+
+.animate-wave-1 { animation: wave-pulse 0.8s ease-in-out infinite 0.1s; }
+.animate-wave-2 { animation: wave-pulse 0.8s ease-in-out infinite 0.25s; }
+.animate-wave-3 { animation: wave-pulse 0.8s ease-in-out infinite 0.4s; }
+.animate-wave-4 { animation: wave-pulse 0.8s ease-in-out infinite 0.2s; }
+.animate-wave-5 { animation: wave-pulse 0.8s ease-in-out infinite 0.35s; }
